@@ -39,6 +39,11 @@ public class Fraccion {
 	}
 	
 	
+	public Fraccion() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public Fraccion sumar(Fraccion a, Fraccion b) {
 		int nuevoNumerador = a.numerador*b.denominador + a.denominador*b.numerador;
 		int nuevoDenominador = a.denominador*b.denominador;

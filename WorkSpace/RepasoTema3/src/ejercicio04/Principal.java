@@ -17,43 +17,61 @@ public class Principal {
 		// TODO Auto-generated method stub
 
 		int numerador1, numerador2;
-		int denominador1,denominador2;
+		int denominador1, denominador2;
 		int op;
-		
+		Fraccion f = new Fraccion();
+
 		System.out.println("Bienvenido al programa de los números racionales");
-		
-		System.out.println("Indique el numerador de la primera fraccion");
-		numerador1 = Leer.datoInt();
-		System.out.println("Indique el denominador de la primera fraccion");
-		denominador1 = Leer.datoInt();
-		
-		System.out.println("Indique el numerador de la segunda fraccion");
-		numerador2 = Leer.datoInt();
-		System.out.println("Indique el numerador de la segunda fraccion");
-		denominador2 = Leer.datoInt();
-		
-		System.out.println("Indique la operación que desea realizar");
-		System.out.println("""
-				1 - Sumar
-				2 - Restar
-				3 - Multiplicar
-				4 - Dividir
-				0 - Salir
-				""");
-		
-		op = Leer.datoInt();
-		
-		switch (op) {
-			case 1:
-				
-				
-				break;
+
+		do {
+
+			System.out.println("Indique el numerador de la primera fraccion");
+			numerador1 = Leer.datoInt();
+			System.out.println("Indique el denominador de la primera fraccion");
+			denominador1 = Leer.datoInt();
+			while(denominador1 == 0) {
+				System.out.println("El denominador no puede ser cero, indique otro número");
+				denominador1 = Leer.datoInt();
+			}
+
+			System.out.println("Indique el numerador de la segunda fraccion");
+			numerador2 = Leer.datoInt();
+			System.out.println("Indique el numerador de la segunda fraccion");
+			denominador2 = Leer.datoInt();
+			while(denominador2 == 0) {
+				System.out.println("El denominador no puede ser cero, indique otro número");
+				denominador2 = Leer.datoInt();
+			}
+
+			Fraccion f1 = new Fraccion(numerador1, denominador1);
+			Fraccion f2 = new Fraccion(numerador2, denominador2);
+
+			System.out.println("Indique la operación que desea realizar");
+			System.out.println("""
+					1 - Sumar
+					2 - Restar
+					3 - Multiplicar
+					4 - Dividir
+					0 - Salir
+					""");
+
+			op = Leer.datoInt();
+
+			switch (op) {
+				case 1:
+					f.sumar(f1, f2);
+					f.imprimirFraccion(f);
 	
-			default:
-				break;
-		}
-		
-		
+					break;
+	
+				default:
+					break;
+			}
+			
+			
+
+		} while (op != 0);
+
 	}
 
 }
