@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ejercicio de Evaluación</title>
+
+   <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    
+
+    
+</head>
+
+<body>
+    <!-- cabecera-->
+    <header class="jumbotron bg-dark text-light text-center">
+      <h1>Calculadora de Grados de Alcohol en Cerveza</h1>
+      <p>Examen Javascript</p>
+    </header>
+    <main class="container-fluid mb-5">
+        <form role="form"  id="formulario" name="formulario" >
+            <div class="row d-flex flex-row justify-content-center">
+                <div class="col-12 col-lg-8">                
+                    <div class="row d-flex flex-row justify-content-center mb-1">
+                        <div class="form-group col-lg-2">
+                            <label for="densInicial">Densidad Inicial</label>
+                            <input type="number" class="form-control " id="densInicial" name="densInicial">
+                        </div>
+                        <div class="form-group col-lg-2">
+                            <label for="densFinal">Densidad Final</label>
+                            <input type="number" class="form-control " id="densFinal" name="densFinal">
+                        </div>
+                    </div>
+                    <div class="row d-flex flex-row justify-content-center mb-1">
+                        <div class="form-group col-lg-2">
+                            <input id="btnCalcular" class="btn btn-info" type="button" value="Calcular">                                    
+                        </div>
+                         <div class="form-group col-lg-2">
+                            <input id="btnLimpiar" class="btn btn-warning" type="button" value="LimpiarDatos">
+                        </div>
+                    </div>
+                    <div class="row d-flex flex-row justify-content-around mb-1">
+                        <div id="aviso" class="col-lg-4">
+                            <!--INDICAR AQUÍ EL RESULTADO-->
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer class="footer text-center bg-dark text-light">
+    <div class="container">
+      <div class="row">
+
+        <!-- Footer Location -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Localización</h4>
+          <p class="lead mb-0">C/ Condes de Bustillo, 17
+            <br>41010 Sevilla
+            <br>Tfno: 954 33 14 88</p>
+        </div>
+
+        <!-- Footer Social Icons -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">RRSS</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="bi bi-twitter"></i>
+          </a>
+          
+        </div>
+
+        <!-- Footer About Text -->
+        <div class="col-lg-4">
+          <h4 class="text-uppercase mb-4">Sobre nosotros</h4>
+          <p class="lead mb-0">Tu sitio de javascript</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+    
+   
+
+    <!-- Calcular Grados de la cerveza-->
+    <script type="text/javascript">
+    
+    </script>
+
+</body>
+
+</html>
