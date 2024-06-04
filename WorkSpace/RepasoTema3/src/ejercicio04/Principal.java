@@ -19,6 +19,7 @@ public class Principal {
 		int numerador1, numerador2;
 		int denominador1, denominador2;
 		int op;
+		Fraccion f1, f2;
 		Fraccion f = new Fraccion();
 
 		System.out.println("Bienvenido al programa de los números racionales");
@@ -43,8 +44,9 @@ public class Principal {
 				denominador2 = Leer.datoInt();
 			}
 
-			Fraccion f1 = new Fraccion(numerador1, denominador1);
-			Fraccion f2 = new Fraccion(numerador2, denominador2);
+			
+			f1 = new Fraccion(numerador1, denominador1);
+			f2 = new Fraccion(numerador2, denominador2);
 
 			System.out.println("Indique la operación que desea realizar");
 			System.out.println("""
@@ -59,8 +61,8 @@ public class Principal {
 
 			switch (op) {
 				case 1:
-					f.sumar(f1, f2);
-					f.imprimirFraccion(f);
+					
+					f.imprimirFraccion(f.sumar(f1, f2));
 	
 					break;
 	
