@@ -47,7 +47,6 @@ public class Fraccion {
 	public Fraccion sumar(Fraccion a, Fraccion b) {
 		int nuevoNumerador = a.numerador*b.denominador + a.denominador*b.numerador;
 		int nuevoDenominador = a.denominador*b.denominador;
-
 		return new Fraccion(nuevoNumerador, nuevoDenominador); 
 		
 	}
@@ -55,22 +54,19 @@ public class Fraccion {
 	public Fraccion restar(Fraccion a, Fraccion b) {
 		int nuevoNumerador = a.numerador*b.denominador - a.denominador*b.numerador;
 		int nuevoDenominador = a.denominador*b.denominador;
-		Fraccion nuevaFraccion = new Fraccion(nuevoNumerador, nuevoDenominador); 
-		return nuevaFraccion;
+		return new Fraccion(nuevoNumerador, nuevoDenominador); 
 		
 	}
 	public Fraccion multiplicar(Fraccion a, Fraccion b) {
 		int nuevoNumerador = a.numerador*b.numerador;
 		int nuevoDenominador = a.denominador*b.denominador;
-		Fraccion nuevaFraccion = new Fraccion(nuevoNumerador, nuevoDenominador); 
-		return nuevaFraccion;
+		return new Fraccion(nuevoNumerador, nuevoDenominador); 
 		
 	}
 	public Fraccion dividir(Fraccion a, Fraccion b) {
 		int nuevoNumerador = a.numerador*b.denominador;
 		int nuevoDenominador = a.denominador*b.numerador;
-		Fraccion nuevaFraccion = new Fraccion(nuevoNumerador, nuevoDenominador); 
-		return nuevaFraccion;
+		return new Fraccion(nuevoNumerador, nuevoDenominador); 
 		
 	}
 	
