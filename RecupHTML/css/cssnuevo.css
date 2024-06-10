@@ -1,0 +1,38 @@
+body {
+    font-family: Calibri, sans-serif;
+    background-color: white;
+    margin: 0 7.5%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    justify-content: center;
+}
+
+header {
+    background-color: rgb(185, 122, 87);
+    width: 100%;
+}
+
+nav {
+    background-color: rgb(185, 122, 87);
+    height: 60px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+

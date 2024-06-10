@@ -1,0 +1,156 @@
+body {
+    font-family: Calibri, sans-serif;
+    background-color: white;
+    margin: 0 7.5%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    justify-content: center;
+}
+
+header {
+    background-color: rgb(185, 122, 87);
+    width: 100%;
+}
+
+
+
+hr{
+    color: rgb(185, 122, 87);
+    padding-top: 0px;
+}
+
+nav {
+    background-color: rgb(185, 122, 87);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav ul li {
+    flex: 1;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: rgb(185, 122, 87);
+    border: 1px solid rgb(185, 122, 87);
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    color: rgb(185, 122, 87);
+}
+
+aside {
+    width: 20%;
+    border-right: solid rgb(185, 122, 87) 1px ;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+aside h2 {
+    font-size: 20pt;
+    background-color: white;
+    color: rgb(185, 122, 87);
+    width: 100%;
+
+}
+
+.publi{
+    border: 1px solid rgb(185, 122, 87);
+    height: 120px;
+    padding-left: 0px;
+    text-align: center;
+    width: auto;
+}
+
+div{
+    padding-left: 10px;
+    width: 100%;
+    margin-right: 20px;
+}
+
+div .contenido{
+    width: 100%;
+}
+
+div h3 {
+    font-size: 20pt;
+    margin: auto;
+}
+
+div h4 {
+    margin: auto;
+    font-size: 10pt;
+}
+
+div p {
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.tabla-centrada{
+    display: flex;
+    justify-content: center;
+}
+
+th, td {
+    border: 1px solid rgb(185, 122, 87);
+    padding: 10px;
+    font-size: 12pt;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+th {
+    background-color: rgb(185, 122, 87);
+    color: white;
+}
+
+tr:hover {
+    background-color: rgb(185, 122, 87);
+    color: white;
+}
+
+footer {
+    background-color: rgb(185, 122, 87);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
