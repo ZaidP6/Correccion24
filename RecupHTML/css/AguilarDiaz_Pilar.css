@@ -1,13 +1,12 @@
 body {
     font-family: Calibri, sans-serif;
     background-color: white;
-    margin: 0 7.5%;
-    padding: 0;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 85%;
     justify-content: center;
+    font-size: 12pt;
 }
 
 header {
@@ -17,7 +16,7 @@ header {
 
 
 
-hr{
+hr {
     color: rgb(185, 122, 87);
     padding-top: 0px;
 }
@@ -41,7 +40,7 @@ nav ul {
 }
 
 nav ul li {
-    flex: 1;
+    width: 100%;
 }
 
 nav ul li a {
@@ -53,7 +52,7 @@ nav ul li a {
     align-items: center;
     height: 60px;
     width: 100%;
-    transition: all 0.5s;
+    transition: 0.5s;
 }
 
 nav ul li a:hover {
@@ -72,21 +71,14 @@ nav ul li a:hover {
 
 aside {
     width: 20%;
-    border-right: solid rgb(185, 122, 87) 1px ;
+    border-right: solid rgb(185, 122, 87) 1px;
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-aside h2 {
-    font-size: 20pt;
-    background-color: white;
-    color: rgb(185, 122, 87);
-    width: 100%;
 
-}
-
-.publi{
+.publi {
     border: 1px solid rgb(185, 122, 87);
     height: 120px;
     padding-left: 0px;
@@ -94,24 +86,26 @@ aside h2 {
     width: auto;
 }
 
-div{
+div {
     padding-left: 10px;
     width: 100%;
     margin-right: 20px;
 }
 
-div .contenido{
+div .contenido {
     width: 100%;
 }
 
 div h3 {
     font-size: 20pt;
     margin: auto;
+    font-weight: 400;
 }
 
 div h4 {
     margin: auto;
     font-size: 10pt;
+    font-weight: 400;
 }
 
 div p {
@@ -120,27 +114,32 @@ div p {
 }
 
 table {
-    width: 80%;
+    width: 50%;
     border-collapse: collapse;
     text-align: center;
     margin-bottom: 2px;
 }
 
-.tabla-centrada{
+.tabla-centrada {
     display: flex;
     justify-content: center;
 }
 
-th, td {
+th,
+td {
     border: 1px solid rgb(185, 122, 87);
     padding: 10px;
     font-size: 12pt;
-    transition: background-color 0.5s, color 0.5s;
+
 }
 
 th {
     background-color: rgb(185, 122, 87);
     color: white;
+}
+
+tr {
+    transition: background-color 0.5s, color 0.5s;
 }
 
 tr:hover {
