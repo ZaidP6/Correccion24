@@ -34,5 +34,6 @@ public class Restaurante {
 		for (int i = 0; i < listaTrabajadores.length; i++) {
 			
 		}
+		return total;
 	}
 }
