@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación 8</title>
+    <script type="text/javascript">
+        // Ejercicio 1
+        function redondearElementos(unArray) {
+            return unArray.filter(elemento => !isNaN(elemento)).map(elemento => Math.round(Number(elemento)));
+        }
+
+        // Ejercicio 2
+        function eliminarExtremos(unArray) {
+            let max = Math.max(...unArray);
+            let min = Math.min(...unArray);
+            return unArray.filter(elemento => elemento !== max && elemento !== min);
+        }
+
+        // Ejercicio 3
+        function parsearNotas(str) {
+            return str.split('#').map(nota => parseFloat(nota.split(':')[1])).filter(nota => !isNaN(nota));
+        }
+
+        // Ejercicio 4
+        function principal() {
+            let cadena = "Jurado1:4.56#Jurado2:nulo#Jurado3:9.28#Jurado4:3.34#Jurado5:5.9#Jurado6:7.32";
+            let notas = parsearNotas(cadena);
+            let notasRedondeadas = redondearElementos(notas);
+            let notasFinales = eliminarExtremos(notasRedondeadas);
+            let suma = notasFinales.reduce((acc, nota) => acc + nota, 0);
+            let media = suma / notasFinales.length;
+            alert(`La nota media es: ${media}`);
+        }
+
+        // Llamar a la función principal una vez la página ha cargado
+        window.onload = principal;
+
+    </script>
+</head>
+
+<body>
+    <h1>Evaluación 8</h1>
+</body>
+
+</html>

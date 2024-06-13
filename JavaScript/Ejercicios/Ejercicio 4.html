@@ -22,7 +22,58 @@
 		
 	</style>
 	<script type="text/javascript">
-		
+		let num1 = null;
+		let num2 = null;
+		let signo = null;
+
+		function actualizarPantalla(valor) {
+			document.getElementById("pantalla").innerText = valor;
+		}
+
+		function controlarNumero(numero) {
+			if (num1 === null || signo === null) {
+				num1 = num1 === null ? numero : num1 + numero;
+				actualizarPantalla(num1);
+			} else {
+				num2 = num2 === null ? numero : num2 + numero;
+				actualizarPantalla(num1 + signo + num2);
+			}
+		}
+
+		function controlarSigno(op) {
+			if (num1 !== null && num2 === null) {
+				signo = op;
+				actualizarPantalla(num1 + signo);
+			}
+		}
+
+		function calcularResultado() {
+			if (num1 !== null && signo !== null && num2 !== null) {
+				let resultado;
+				switch (signo) {
+					case '+':
+						resultado = parseInt(num1) + parseInt(num2);
+						break;
+					case '-':
+						resultado = parseInt(num1) - parseInt(num2);
+						break;
+				}
+				actualizarPantalla(resultado);
+				num1 = null;
+				num2 = null;
+				signo = null;
+			}
+		}
+
+		document.addEventListener('DOMContentLoaded', () => {
+			document.querySelectorAll('.bg-info').forEach(btn => {
+				btn.addEventListener('click', () => controlarNumero(btn.innerText));
+			});
+
+			document.getElementById('mas').addEventListener('click', () => controlarSigno('+'));
+			document.getElementById('menos').addEventListener('click', () => controlarSigno('-'));
+			document.getElementById('igual').addEventListener('click', calcularResultado);
+		});
 	</script>
 </head>
 <body>
@@ -37,7 +88,7 @@
 		<div class="row d-flex flex-row justify-content-center">			
 			<div class="col-12 col-lg-4 ">
 				<div class="row mb-1">
-					<div id="pantalla" class="col-12 badge rounded-pill bg-light text-right">0</div>
+					<div id="pantalla" class="col-12 badge rounded-pill bg-dark text-right">0</div>
 				</div>
 				<div class="row d-flex flex-row justify-content-around mb-1">
 					<div id="7" class="col-3 badge rounded-pill bg-info">7</div>
