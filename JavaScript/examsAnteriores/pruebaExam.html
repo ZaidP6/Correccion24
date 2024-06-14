@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // Función para comprobar el PIN
+function comprobarPIN(pinEscrito, pinEsperado) {
+    // Verificar que ambos parámetros son números y que el PIN escrito es un número de 4 cifras
+    if (typeof pinEscrito !== 'number' || typeof pinEsperado !== 'number' || pinEscrito < 1000 || pinEscrito > 9999) {
+        return false;
+    }
+    return pinEscrito === pinEsperado;
+}
+
+// Función para añadir un mensaje
+function anadirMensaje(mensaje, tipo) {
+    const avisoDiv = document.getElementById('aviso');
+    avisoDiv.innerHTML = '';
+    avisoDiv.className = 'badge badge-pill';
+
+    if (tipo === 'error') {
+        avisoDiv.classList.add('badge-danger');
+    } else if (tipo === 'exito') {
+        avisoDiv.classList.add('badge-success');
+    }
+
+    avisoDiv.textContent = mensaje;
+}
+
+// Función llamada cuando un botón numérico es pulsado
+function botonNumericoPulsado(event) {
+    const input = document.getElementById('pinInput');
+    let pinEscrito = input.value;
+
+    if (pinEscrito.length >= 4) {
+        anadirMensaje('El PIN no puede tener más de 4 dígitos', 'error');
+        return;
+    }
+
+    const numeroPulsado = event.target.dataset.num;
+    input.value += numeroPulsado;
+}
+
+// Función llamada cuando el botón "Comprobar" es pulsado
+function botonComprobarPulsado() {
+    const input = document.getElementById('pinInput');
+    const pinEscrito = parseInt(input.value, 10);
+    const pinEsperado = 1234;
+
+    if (comprobarPIN(pinEscrito, pinEsperado)) {
+        anadirMensaje('PIN correcto', 'exito');
+    } else {
+        anadirMensaje('PIN incorrecto', 'error');
+    }
+}
+
+// Función llamada cuando el botón "Limpiar datos" es pulsado
+function botonLimpiarPulsado() {
+    const input = document.getElementById('pinInput');
+    const avisoDiv = document.getElementById('aviso');
+    
+    input.value = '';
+    avisoDiv.innerHTML = '';
+    avisoDiv.className = '';
+}
+
+// Configurar los eventos al cargar el documento
+document.addEventListener('DOMContentLoaded', () => {
+    const botonesNumericos = document.querySelectorAll('#teclado button[data-num]');
+    botonesNumericos.forEach(boton => {
+        boton.addEventListener('pointerup', botonNumericoPulsado);
+    });
+
+    const botonComprobar = document.getElementById('botonComprobar');
+    botonComprobar.addEventListener('click', botonComprobarPulsado);
+
+    const botonLimpiar = document.getElementById('botonLimpiar');
+    botonLimpiar.addEventListener('click', botonLimpiarPulsado);
+});
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

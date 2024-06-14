@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Examen</title>
+	<meta charset="utf-8">
+
+	 <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	
+	<!--fuentes-->
+	<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+	<!-- INSERTA AQUÍ TU SCRIPT-->
+	
+	<style type="text/css">
+		.badge{
+			height: 2em;
+			font-size: 2em;
+		}
+		.badge-light{
+			font-family: 'Major Mono Display', monospace;
+		}
+		.badge-danger{
+			font-size: 1.5em;
+			
+		}
+	</style>
+	
+	
+</head>
+<body>
+	<!-- cabecera-->
+	<header class="mb-4 p-5 rounded bg-dark text-light text-center">
+	  <h1>Examen Javascript</h1>
+	  <p>Calculadora</p>
+	</header>
+
+	<!--formulario-->
+	<main class="container-fluid">
+		<div class="row d-flex flex-row justify-content-center">			
+			<div class="col-12 col-lg-4 ">
+				<div class="row mb-1">
+					<form name="formulario" id="pantalla" class="col-12 badge rounded-pill bg-light text-right"><input type="password" name="pantalla" class="form-control bg-light border-0" disabled></form>
+				</div>
+				<div class="row d-flex flex-row justify-content-around mb-1">
+					<div id="btn7" class="btnNumerico col-3 badge rounded-pill bg-info">7</div>
+					<div id="btn8" class="btnNumerico col-3 badge rounded-pill bg-info">8</div>
+					<div id="btn9" class="btnNumerico col-3 badge rounded-pill bg-info">9</div>
+				</div>
+				<div class="row d-flex flex-row justify-content-around mb-1">
+					<div id="btn4" class="btnNumerico col-3 badge rounded-pill bg-info">4</div>
+					<div id="btn5" class="btnNumerico col-3 badge rounded-pill bg-info">5</div>
+					<div id="btn6" class="btnNumerico col-3 badge rounded-pill bg-info">6</div>
+				</div>
+				<div class="row d-flex flex-row justify-content-around mb-1">
+					<div id="btn1" class="btnNumerico col-3 badge rounded-pill bg-info">1</div>
+					<div id="btn2" class="btnNumerico col-3 badge rounded-pill bg-info">2</div>
+					<div id="btn3" class="btnNumerico col-3 badge rounded-pill bg-info">3</div>
+				</div>
+				<div class="row d-flex flex-row justify-content-around mb-1">				
+					<div id="btn0" class="btnNumerico col-3 col-offset-3 badge rounded-pill bg-info">0</div>			
+									
+				</div>
+				<div class="row d-flex flex-row justify-content-around mb-1">				
+					<div id="comprobar" class="col-5 badge rounded-pill bg-info">Comprobar</div>
+					<div id="limpiar" class="col-5 badge rounded-pill bg-warning">Limpiar</div>			
+										
+				</div>					
+				<div class="row d-flex flex-row justify-content-center mb-4">		
+					<div id="aviso" class="col-12">
+                		<!--INDICAR AQUÍ EL MENSAJE-->
+          			</div>					
+				</div>	
+			</div>
+		</div>
+	</main>
+
+
+</body>
+</html>
